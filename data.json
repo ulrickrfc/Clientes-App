@@ -1,0 +1,38 @@
+
+  [
+    {
+      "nome": "Ulrick",
+      "email": "ulrickroque@gmail.com",
+      "cpf_cnpj": "111",
+      "tel": "312321",
+      "cep":"41231",
+      "logradouro": "asdasda",
+      "numero": "512312",
+      "bairro": "BairroA",
+      "cidade": "Salvador",
+      "estado": "Bahia"
+    },
+    {
+      "nome": "Ulrick",
+      "email": "ulrickroque@gmail.com",
+      "cpf_cnpj": "123",
+      "tel": "312321",
+      "cep":"41231",
+      "logradouro": "asdasda",
+      "numero": "512312",
+      "bairro": "BairroA",
+      "cidade": "Salvador",
+      "estado": "Bahia"
+    },{
+      "nome": "Ulrick",
+      "email": "ulrickroque@gmail.com",
+      "cpf_cnpj": "321",
+      "tel": "312321",
+      "cep":"41231",
+      "logradouro": "asdasda",
+      "numero": "512312",
+      "bairro": "BairroA",
+      "cidade": "Salvador",
+      "estado": "Bahia"
+    }
+  ]
