@@ -9,7 +9,7 @@
 
 ## Tecnologias Usadas
 
-- NodeJS, JavaScript, HTML, CSS
+- NodeJS, JavaScript, HTML, CSS, Bootstrap
 
 ## Imagens
 
