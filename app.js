@@ -1,32 +1,63 @@
 const express = require('express');
 const app = express();
+const nunjucks = require('nunjucks');
 
-const data = require("./data.json")
+const data = []
 
 app.use(express.json())
+app.use(express.static('public')); //pega os arquivos css/script pra usar
+
+const bodyParser = require("body-parser")
+app.use(bodyParser.urlencoded({extended:true}));
 
 const methodOverride = require('method-override')
+app.use(methodOverride("_method")) // sobescreve o metodo das rotas(get/post -> put, delete)
 
+app.set("view engine", "njk");
 
-app.get("/", (req,res) => {
-  res.json(data)
+nunjucks.configure("views", {
+  express: app,
+  autoescape: false,
+  noCache:true
 })
 
-app.get("/", (req,res) => {
-  res.json(data)
+
+app.get("/", (req,res) =>{
+  res.render("list/index", {clientes: data})
 })
+
+app.get("/new", (req,res) => {
+  res.render("form/index")
+})
+
 app.post("/", (req,res) => {
-  let cliente = req.body
-  data.push(cliente)
 
-  res.send("O novo cliente foi adicionado!")
+  let cliente = {
+    nome: req.body.nome,
+    email: req.body.email,
+    id: req.body.cpf_cnpj,
+    cel:req.body.telefone,
+    cep: req.body.cep,
+    logradouro:req.body.logradouro,
+    num:req.body.numero,
+    bairro:req.body.bairro,
+    cidade:req.body.cidade,
+    estado:req.body.estado
+  }
+
+  data.push(cliente)
+  res.redirect("/")
 })
 
-app.delete("/:id", (req,res) => {
 
-  let cpf_cnpj = req.params.id
+app.get("/delete", (req,res) => {
+  res.render("delete/index")
+})
+app.delete("/", (req,res) => {
 
-  const cliente = data.findIndex(cli => cli.cpf_cnpj == cpf_cnpj)
+  let cpf_cnpj = req.body.id
+
+  const cliente = data.findIndex(cli => cli.id == cpf_cnpj)
   if(cliente == -1){
     res.send("Cliente não encontrado!");
   } else {

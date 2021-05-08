@@ -1,0 +1,57 @@
+{% extends "layout.njk" %}
+{% block content %}
+<div class="container formulario">
+  <form action="/" method="POST">
+    <div class="mb-3">
+      <label>Nome</label>
+      <input type="text" class="form-control" name="nome">
+    </div>
+
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" class="form-control" name="email">
+    </div>
+
+    <div class="mb-3">
+      <label>CPF ou CNPJ</label>
+      <input type="text" class="form-control" name="cpf_cnpj">
+      <div>Não utilize pontos ou vírgulas</div>
+    </div>
+
+    <div class="mb-3">
+      <label>Telefone</label>
+      <input type="text" class="form-control" name="telefone">
+    </div>
+
+    <div class="mb-3">
+      <label>CEP</label>
+      <input type="text" class="form-control" name="cep">
+    </div>
+
+    <div class="mb-3">
+      <label>Logradouro</label>
+      <input type="text" class="form-control" name="logradouro">
+    </div>
+
+    <div class="mb-3">
+      <label>Número</label>
+      <input type="text" class="form-control" name="numero">
+    </div>
+    <div class="mb-3">
+      <label>Bairro</label>
+      <input type="text" class="form-control" name="bairro">
+    </div>
+    <div class="mb-3">
+      <label>Cidade</label>
+      <input type="text" class="form-control" name="cidade">
+    </div>
+    <div class="mb-3">
+      <label>Estado</label>
+      <input type="text" class="form-control" name="estado">
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+{% block content %}
+<div class="clients container">
+  {% for cliente in clientes %}
+  <div class="client">
+    <div>
+      Nome: <span>{{cliente.nome}}</span>
+    </div>
+    <div>
+      Email: <span>{{cliente.email}}</span>
+    </div>
+    <div>
+      CPF ou CPNJ: <span>{{cliente.id}}</span>
+    </div>
+    <div>
+      Telefone: <span>{{cliente.cel}}</span>
+    </div>
+    <div>
+      CEP: <span>{{cliente.cep}}</span>
+    </div>
+    <div>
+      Logradouro: <span>{{cliente.logradouro}}</span>
+    </div>
+    <div>
+      Número: <span>{{cliente.num}}</span>
+    </div>
+    <div>
+      Bairro: <span>{{cliente.bairro}}</span>
+    </div>
+    <div>
+      Cidade: <span>{{cliente.cidade}}</span>
+    </div>
+    <div>
+      Estado: <span>{{cliente.estado}}</span>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock content %}
