@@ -10,4 +10,3 @@
 ## Tecnologias Usadas
 
 - NodeJS, JavaScript, HTML, CSS
-
