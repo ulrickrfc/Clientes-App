@@ -4,9 +4,10 @@
 body{
   font-family: 'Raleway', sans-serif;
 }
-
+.menu {
+  margin-bottom: 20px;
+}
 .clients{
-  margin-top: 20px;
   gap:8px;
 }
 
@@ -58,6 +59,4 @@ body{
 }
 
 .deleteForm{
-  margin-top: 20px;
-
 }
